@@ -21,8 +21,8 @@ const Products = () => {
             >
               <Image
                 src={item.image_url}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 alt={item.product_name}
                 className="w-full"
               />

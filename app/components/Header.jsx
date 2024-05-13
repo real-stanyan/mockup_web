@@ -1,8 +1,36 @@
+"use client";
+
 import Link from "next/link";
 
 import { FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+
+  // 检查购物车是否存在且不为空
+  if (cart && Object.keys(cart).length) {
+    // 遍历购物车中的每个商品项
+    for (let productKey in cart) {
+      if (cart.hasOwnProperty(productKey)) {
+        // 获取单个商品的信息
+        let item = cart[productKey];
+        console.log(
+          `Product: ${productKey}, Quantity: ${item.quantity}, Price: ${item.price}`
+        );
+
+        // 可以在这里将商品信息添加到页面上的元素中
+        // 例如创建一个列表显示每个商品的信息
+        let listItem = document.createElement("li");
+        listItem.textContent = `Product: ${productKey}, Quantity: ${item.quantity}, Price: ${item.price}`;
+      }
+    }
+  } else {
+    console.log("Your cart is empty.");
+    // 处理购物车为空的情况，例如显示购物车为空的消息
+    let emptyMessage = document.createElement("p");
+    emptyMessage.textContent = "Your cart is empty.";
+  }
+
   return (
     <div className="w-[100vw] h-[120px] border-b-2">
       {/* Header Messages */}
