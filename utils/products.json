@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "product_name": "Vida Glow Active Collagen Powder",
+    "price_detail": "$49.99 per bottle (contains 500g)",
+    "price": "$49.99",
+    "image_url": "/images/Vida_Glow_Active_Collagen_Powder.webp",
+    "product_features": [
+      "Sourced from natural ingredients",
+      "No added sugar",
+      "Helps improve skin elasticity and radiance",
+      "One scoop daily for an easy collagen boost"
+    ],
+    "packaging_design": [
+      "The packaging is an elegant cylindrical bottle",
+      "The main color is light pink, aligning with a natural and healthy image",
+      "The bottle features the Vida Glow brand logo"
+    ]
+  },
+  {
+    "id": 2,
+    "product_name": "Vida Glow Bright Vitamin C",
+    "price_detail": "$34.99 per bottle (contains 60 capsules)",
+    "price": "$34.99",
+    "image_url": "/images/Vida_Glow_Bright_Vitamin_C.webp",
+    "product_features": [
+      "Boosts immunity",
+      "Promotes skin health and enhances complexion brightness",
+      "Sourced from natural ingredients, no artificial additives"
+    ],
+    "packaging_design": [
+      "Packaged in a compact round bottle",
+      "The primary color is a bright orange, highlighting the characteristics of Vitamin C",
+      "The bottle features the Vida Glow brand logo"
+    ]
+  },
+  {
+    "id": 3,
+    "product_name": "Vida Glow Ocean Essence Omega-3 Fish Oil",
+    "price_detail": "$39.99 per bottle (contains 120 capsules)",
+    "price": "$39.99",
+    "image_url": "/images/Vida_Glow_Ocean_Essence_Omega-3_Fish_Oil.webp",
+    "product_features": [
+      "Supports cardiovascular health",
+      "Enhances brain function and mental clarity",
+      "Sourced from deep ocean fish",
+      "No fishy aftertaste"
+    ],
+    "packaging_design": [
+      "The bottle is sleek and tall",
+      "Predominant color is deep blue, reflecting the ocean theme",
+      "The Vida Glow logo is prominently displayed"
+    ]
+  },
+  {
+    "id": 4,
+    "product_name": "Vida Glow Pure Protein",
+    "price_detail": "$54.99 per tub (contains 1kg)",
+    "price": "$54.99",
+    "image_url": "/images/Vida_Glow_Pure_Protein.webp",
+    "product_features": [
+      "High in plant-based protein",
+      "Enhances muscle recovery and growth",
+      "Gluten-free and vegan-friendly",
+      "Neutral taste, perfect for blending with other ingredients"
+    ],
+    "packaging_design": [
+      "The packaging is a robust, tall tub",
+      "The primary color is green, indicating a natural and healthy product",
+      "The Vida Glow logo is clearly visible"
+    ]
+  },
+  {
+    "id": 5,
+    "product_name": "Vida Glow Power Creatine",
+    "price_detail": "$29.99 per tub (contains 500g)",
+    "price": "$29.99",
+    "image_url": "/images/Vida_Glow_Power_Creatine.webp",
+    "product_features": [
+      "Enhances physical performance and power",
+      "Supports muscle growth and recovery",
+      "Micronized for better solubility and absorption",
+      "Unflavored, mixes easily with any beverage"
+    ],
+    "packaging_design": [
+      "Compact, round tub",
+      "Primary color is metallic silver, symbolizing strength and high performance",
+      "The Vida Glow logo is clearly displayed"
+    ]
+  },
+  {
+    "id": 6,
+    "product_name": "Vida Glow Essential BCAA",
+    "price_detail": "$42.99 per canister (contains 400g)",
+    "price": "$42.99",
+    "image_url": "/images/Vida_Glow_Essential_BCAA.webp",
+    "product_features": [
+      "Promotes muscle recovery and growth",
+      "Reduces fatigue during workouts",
+      "Includes the optimal 2:1:1 ratio of Leucine, Isoleucine, and Valine",
+      "Refreshing fruit flavor for enjoyable consumption"
+    ],
+    "packaging_design": [
+      "The container is a sleek, tall canister",
+      "Vibrant color scheme featuring a mix of bright blue and green, suggesting vitality and energy",
+      "Clearly labeled with BCAA and the Vida Glow logo is prominent"
+    ]
+  }
+]
