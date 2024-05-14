@@ -51,9 +51,9 @@ const Header = () => {
           <p>FEEDBACK</p>
           <p>ABOUT US</p>
         </div>
-        <div>
+        <Link href="/cart">
           <FaShoppingCart className="text-[2vw]" />
-        </div>
+        </Link>
       </div>
     </div>
   );

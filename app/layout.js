@@ -1,5 +1,7 @@
 import { Oswald, Orbitron, Raleway } from "next/font/google";
 import "./globals.css";
+import { StoreProvider } from "@/store/StoreProvider";
+import { Toaster } from "@/components/ui/toaster";
 
 import Header from "./components/Header";
 
@@ -27,13 +29,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${oswald.variable} ${orbitron.variable} ${raleway.variable} overflow-x-hidden`}
-      >
-        <Header />
-        {children}
-      </body>
-    </html>
+    <StoreProvider>
+      <html lang="en">
+        <body
+          className={`${oswald.variable} ${orbitron.variable} ${raleway.variable} overflow-x-hidden`}
+        >
+          <Header />
+          {children}
+          <Toaster />
+        </body>
+      </html>
+    </StoreProvider>
   );
 }

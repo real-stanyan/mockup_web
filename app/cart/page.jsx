@@ -1,20 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
-
-  useEffect(() => {
-    // 从 localStorage 获取购物车数据
-    const cart = JSON.parse(localStorage.getItem("cart") || "{}");
-    const items = Object.entries(cart).map(([key, value]) => ({
-      product: key,
-      quantity: value.quantity,
-      price: value.price,
-    }));
-    setCartItems(items);
-  }, []);
+  const cartItems = useSelector((state) => state.cart.items);
 
   return (
     <div className="container mx-auto mt-10">
@@ -23,7 +12,7 @@ const Cart = () => {
         <ul className="divide-y divide-gray-200">
           {cartItems.map((item, index) => (
             <li key={index} className="py-4 flex justify-between items-center">
-              <span className="text-gray-700">{item.product}</span>
+              <span className="text-gray-700">{item.product_name}</span>
               <span className="text-gray-500">Qty: {item.quantity}</span>
               <span className="text-green-500">${item.price}</span>
             </li>

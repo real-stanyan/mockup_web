@@ -1,6 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { addItem, removeItem, updateQuantity } from "@/store/cartSlice";
+import { useToast } from "@/components/ui/use-toast";
 
 import {
   Select,
@@ -14,6 +17,8 @@ import { Button } from "@/components/ui/button";
 import products from "@/utils/products";
 
 export default function Products({ params }) {
+  const { toast } = useToast();
+  const dispatch = useDispatch();
   const [data, setData] = useState({});
   const [product, setProduct] = useState({
     product_name: "",
@@ -26,36 +31,20 @@ export default function Products({ params }) {
     setData(products.find((item) => item.id === parseInt(params.slug)));
   }, [params.slug]);
 
-  const handleAddCart = () => {
-    // 更新产品状态
+  useEffect(() => {
     setProduct({
       ...product,
       product_name: data.product_name,
       price: data.price,
     });
+  }, [data]);
 
-    // 检查是否存在购物车，如果不存在，则创建一个空的购物车
-    if (!localStorage.getItem("cart")) {
-      localStorage.setItem("cart", JSON.stringify({}));
-    }
-
-    // 从localStorage获取购物车
-    let cart = JSON.parse(localStorage.getItem("cart"));
-
-    // 获取商品ID或名称作为键
-    const productKey = data.product_name;
-
-    // 检查购物车中是否已经有了该商品
-    if (cart[productKey]) {
-      // 如果商品已存在，更新其数量
-      cart[productKey].quantity += 1; // 假设每次添加1个商品，或者可以传递一个数量参数
-    } else {
-      // 如果商品不存在，添加新的条目
-      cart[productKey] = { quantity: 1, price: data.price };
-    }
-
-    // 将更新后的购物车保存回localStorage
-    localStorage.setItem("cart", JSON.stringify(cart));
+  const handleAddCart = () => {
+    dispatch(addItem(product));
+    toast({
+      title: `${product.product_name}(${product.flavor} x ${product.quantity} has added to cart)`,
+      description: "Friday, February 10, 2023 at 5:57 PM",
+    });
   };
 
   return (
